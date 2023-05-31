@@ -1,0 +1,62 @@
+#btns {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 80px;
+    display: flex;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+}
+.btn img {
+    width: 40%;
+    z-index: 2;
+}
+.select {
+    /*TODO: 60 pixels de um para o outro */
+    position: absolute;
+    border-radius: 50%;
+    background-color: blueviolet;
+    left: 8px;
+    transition: .5s all;
+    animation: animate .5s forwards;
+}
+.select.active {
+    animation: animateReverse .5s forwards;
+    animation-fill-mode: forwards;
+}
+#cube {
+    border-radius: 50%;
+}
+@keyframes animate {
+    0% {
+        left: 8px;
+    }
+    100% {
+        left: 100px;
+    }
+}
+
+@keyframes animateReverse {
+    0% {
+        left: 100px;
+    }
+    100% {
+        left: 8px;
+    }
+}
+
+#videomp4, #modeloVideo {
+    display: none !important; 
+}
